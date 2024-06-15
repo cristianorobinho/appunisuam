@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>logar no Pokemon Cards</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="boxImage">
+    <img src="/assets/image/pokemon.jpg" />
+  </div>
+
+  <div class="wellcome">
+    <h3>Bem vindo ao Pokémon Cards</h3>
+    <p>
+      O melhor lugar para você encontrar as cartas de pokémon que você deseja
+    </p>
+  </div>
+
+  <div class="formulario">
+    <h3>Faça seu login </h3>
+
+    <form>
+      <ion-input
+        class="input"label="Email"label-placement="floating"
+        placeholder="Digite seu email"type="text"[(ngModel)]="email"
+      ></ion-input>
+
+      <ion-input
+        class="input"label="Senha"type="senha"label-placement="floating"
+        placeholder="Digite sua senha"type="password"
+        [(ngModel)]="senha"
+      ></ion-input>
+
+      <div class="btns">
+        <ion-button class="btn" expand="full" (click)="handleLogin()">Logar</ion-button>
+        <ion-button class="btn" color="secondary">Esqueci a Senha</ion-button>
+      </div>
+
+    </form>
+  </div>
+</ion-content>
